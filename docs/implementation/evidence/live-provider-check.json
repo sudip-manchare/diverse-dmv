@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-10-17T22:45:06.926Z",
+  "reproduction": "node --env-file=.env.live --conditions=react-server --import tsx scripts/live-provider-check.ts (requires app3000 running with same live environment and installed Chrome)",
+  "scope": "Live Firebase Authentication/Admin + Tiger Data PostgreSQL + Google Gemini, real local Next.js HTTP/browser. No provider replies, profiles, relationships or chat persistence mocked.",
+  "privacy": "No credentials, tokens, email addresses or profile/message contents recorded in evidence.",
+  "cleanup": "pass: only this run’s three fictional identities and matching database rows removed",
+  "results": [
+    {
+      "check": "live-firebase-signup-admin-server-session",
+      "status": "pass",
+      "actualBrowserSignup": true,
+      "realFirebaseIdentities": 3,
+      "adminLookupVerified": true,
+      "appSessionsPersisted": true,
+      "optionalContactOmittedAtSignup": true
+    },
+    {
+      "check": "hosted-profile-private-contacts-and-live-vectors",
+      "status": "pass",
+      "normalizedPhoneOwnerOnly": true,
+      "privateSeekingIdentityOmitted": true,
+      "currentStoredVectors": 3,
+      "dimensions": 768,
+      "realGemini": true,
+      "sharedRecommendationsReady": true
+    },
+    {
+      "check": "hosted-request-message-retry-and-unrelated-denial",
+      "status": "pass",
+      "requestReplayDeduplicated": true,
+      "mutualConnectionVisible": true,
+      "messageReplayExactlyOnce": true,
+      "twoWayHistoryCount": 2,
+      "unrelatedListEmpty": true,
+      "directBeforeAfterDenied": true,
+      "unrelatedSendDenied": true
+    },
+    {
+      "check": "real-browser-logout-login-history-and-uncertain-retry",
+      "status": "pass",
+      "logoutRevokesOldCookie": true,
+      "realFirebasePasswordLogin": true,
+      "reopenedSamePersistedThread": true,
+      "lostAcknowledgementAfterRealCommit": true,
+      "composerRetained": true,
+      "explicitRetryStoredExactlyOnce": true
+    },
+    {
+      "check": "hosted-remove-reconnect-block-unblock",
+      "status": "pass",
+      "removalReadOnly": true,
+      "removedSendDenied": true,
+      "realCooldown429": true,
+      "onlyFixtureCooldownClockAdvanced": true,
+      "reconnectionReusesThread": true,
+      "blockBothDirectionsDirectReadsAndSendsDenied": true,
+      "unblockDoesNotReconnect": true
+    },
+    {
+      "check": "real-admin-deletion-disable-and-retained-history",
+      "status": "pass",
+      "requestIsReceiptOnly": true,
+      "appAccessAndSessionsRevoked": true,
+      "actualFirebaseUserDisabled": true,
+      "providerTokenRevocationCalled": true,
+      "counterpartHistoryReadOnly": true,
+      "neutralUnavailableLabel": true,
+      "processingIsNotErasure": true
+    },
+    {
+      "check": "provider-runtime-result",
+      "status": "pass",
+      "actualFirebase": true,
+      "actualTigerData": true,
+      "actualGemini": true,
+      "applicationRunsLocally": true,
+      "cloudRunAndDomain": false,
+      "recoveryEmailDelivery": "unverified; no recovery emails sent",
+      "elapsedMs": 27790
+    }
+  ]
+}

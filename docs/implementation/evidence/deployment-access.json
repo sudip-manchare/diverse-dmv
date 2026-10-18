@@ -1,0 +1,224 @@
+{
+  "recordedAt": "2026-10-17T22:45:30.959Z",
+  "projectId": "diverse-dmv",
+  "credentialType": "Owner-supplied Firebase Admin service-account JSON",
+  "readOnly": true,
+  "mutationsPerformed": [],
+  "checks": [
+    {
+      "check": "project-metadata",
+      "http": 200,
+      "status": "accessible",
+      "projectId": "diverse-dmv",
+      "lifecycleState": "ACTIVE",
+      "projectNumberPresent": true
+    },
+    {
+      "check": "billing-enabled",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "cloudbilling.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "secret-metadata-only",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "secretmanager.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "scheduler-job-metadata",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "cloudscheduler.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "artifact-repositories-us",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "artifactregistry.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "artifact-repositories-us-east4",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "artifactregistry.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "cloud-run-services-us-east4",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "run.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "api-key-restrictions-metadata",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "apikeys.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "cloud-run-services-us-east1",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "run.googleapis.com"
+          }
+        ]
+      }
+    },
+    {
+      "check": "project-permissions",
+      "http": 200,
+      "status": "accessible",
+      "granted": [
+        "iam.serviceAccounts.list",
+        "resourcemanager.projects.get"
+      ],
+      "notGrantedAtProject": [
+        "serviceusage.services.list",
+        "serviceusage.services.get",
+        "serviceusage.services.enable",
+        "run.services.list",
+        "run.services.get",
+        "run.services.create",
+        "run.services.update",
+        "run.services.setIamPolicy",
+        "artifactregistry.repositories.list",
+        "artifactregistry.repositories.get",
+        "artifactregistry.repositories.create",
+        "artifactregistry.repositories.uploadArtifacts",
+        "secretmanager.secrets.list",
+        "secretmanager.secrets.get",
+        "secretmanager.secrets.create",
+        "secretmanager.versions.add",
+        "secretmanager.versions.access",
+        "cloudscheduler.jobs.list",
+        "cloudscheduler.jobs.create",
+        "cloudscheduler.jobs.update",
+        "cloudbuild.builds.create",
+        "cloudbuild.builds.get",
+        "iam.serviceAccounts.actAs",
+        "apikeys.keys.list"
+      ],
+      "scopeNote": "Project-level test; resource-specific grants can differ."
+    },
+    {
+      "check": "required-api-enablement",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "AUTH_PERMISSION_DENIED",
+            "domain": "serviceusage.googleapis.com",
+            "service": "cloudresourcemanager.googleapis.com",
+            "permission": "serviceusage.services.list"
+          }
+        ]
+      }
+    },
+    {
+      "check": "artifact-repositories-us-east1",
+      "http": 403,
+      "status": "unavailable",
+      "error": {
+        "status": "PERMISSION_DENIED",
+        "details": [
+          {
+            "reason": "SERVICE_DISABLED",
+            "domain": "googleapis.com",
+            "service": "artifactregistry.googleapis.com"
+          }
+        ]
+      }
+    }
+  ],
+  "conclusion": {
+    "requiredDeploymentPermissionsGranted": false,
+    "missingAtProject": [
+      "run.services.create",
+      "run.services.update",
+      "artifactregistry.repositories.uploadArtifacts",
+      "secretmanager.secrets.create",
+      "secretmanager.versions.add",
+      "cloudscheduler.jobs.create",
+      "iam.serviceAccounts.actAs"
+    ],
+    "billingEnabled": null,
+    "existingReadyCloudRunTargets": [],
+    "limitations": [
+      "A denied metadata request does not prove the resource is absent.",
+      "No billing enabled or paid resources created. No API enabled.",
+      "A Firebase Admin credential does not by itself imply deployment privileges.",
+      "No Google Maps key is inferred from or reused from Firebase/Gemini credentials."
+    ]
+  }
+}

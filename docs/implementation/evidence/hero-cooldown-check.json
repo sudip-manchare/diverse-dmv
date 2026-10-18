@@ -1,0 +1,87 @@
+{
+  "testedAt": "2026-10-17T22:27:23.404Z",
+  "browser": "153.0.8010.12",
+  "environment": "Local Next.js, Firebase Authentication emulator, actual local PostgreSQL records; no mocked application replies.",
+  "results": [
+    {
+      "check": "DIVE-03-signedout-coordinate",
+      "region": "whitespace",
+      "targetTag": "svg",
+      "pass": true,
+      "result": "Account-choice dialog opened; Escape returned to illustrated map."
+    },
+    {
+      "check": "DIVE-03-signedout-coordinate",
+      "region": "state",
+      "targetTag": "path",
+      "pass": true,
+      "result": "Account-choice dialog opened; Escape returned to illustrated map."
+    },
+    {
+      "check": "DIVE-03-signedout-coordinate",
+      "region": "halo",
+      "targetTag": "ellipse",
+      "pass": true,
+      "result": "Account-choice dialog opened; Escape returned to illustrated map."
+    },
+    {
+      "check": "DIVE-03-signedout-coordinate",
+      "region": "dmv",
+      "targetTag": "circle",
+      "pass": true,
+      "result": "Account-choice dialog opened; Escape returned to illustrated map."
+    },
+    {
+      "check": "DIVE-03-unresolved-real-session",
+      "pass": true,
+      "result": "Held outgoing real session read without fabricating a response. Map still opened public account choice; released request used actual server."
+    },
+    {
+      "check": "DIVE-03-authenticated-coordinate",
+      "region": "whitespace",
+      "targetTag": "svg",
+      "pass": true,
+      "result": "Server-confirmed member navigated directly to Dashboard."
+    },
+    {
+      "check": "DIVE-03-authenticated-coordinate",
+      "region": "state",
+      "targetTag": "path",
+      "pass": true,
+      "result": "Server-confirmed member navigated directly to Dashboard."
+    },
+    {
+      "check": "DIVE-03-authenticated-coordinate",
+      "region": "halo",
+      "targetTag": "ellipse",
+      "pass": true,
+      "result": "Server-confirmed member navigated directly to Dashboard."
+    },
+    {
+      "check": "DIVE-03-authenticated-coordinate",
+      "region": "dmv",
+      "targetTag": "circle",
+      "pass": true,
+      "result": "Server-confirmed member navigated directly to Dashboard."
+    },
+    {
+      "check": "DIVE-03-expired-server-session",
+      "pass": true,
+      "result": "Revoked actual application session after confirmed landing render; hero navigation showed neutral log-in recovery, no protected data or redirect loop."
+    },
+    {
+      "check": "E03-actual-removal-cooldown-ui",
+      "pass": true,
+      "retryAt": "2026-10-24T22:27:22.458Z",
+      "server429": true,
+      "result": "Actual request replay consumed one request, B accepted, R removed connection. Server returned exact cooldown timestamp; profile UI displayed its localized date and suppressed Connect."
+    },
+    {
+      "check": "E03-actual-daily-allowance-ui",
+      "pass": true,
+      "storedRequests": 20,
+      "retryAt": "2026-10-18T22:27:22.378Z",
+      "result": "20 actual persisted requests including replayed/accepted/removed first request. The21st UI send returned real429 and displayed server retryAt; same-operation UI retry stayed429 without consuming another request."
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "testedAt": "2026-10-17T22:23:31.428Z",
+  "browser": "153.0.8010.12",
+  "environment": "Local Next.js; Firebase Authentication emulator; local PostgreSQL; live Gemini indexing where invoked.",
+  "retests": [
+    {
+      "check": "keyboard-skip-link",
+      "initial": "fail: fragment navigation did not focus main",
+      "fix": "Added tabIndex=-1 to public/protected main landmarks",
+      "retest": "pass"
+    },
+    {
+      "check": "keyboard-map-dialog",
+      "initial": "fail: native dialog Tab cycle reached browser chrome/body",
+      "fix": "Explicit first/last enabled-control Tab cycling; native modal Escape/focus return retained",
+      "retest": "pass"
+    }
+  ],
+  "results": [
+    {
+      "check": "keyboard-skip-link",
+      "pass": true,
+      "focusedTarget": "main"
+    },
+    {
+      "check": "keyboard-map-dialog",
+      "pass": true,
+      "entryFocus": "dialog-heading",
+      "tabTrap": true,
+      "escapeRestored": true
+    },
+    {
+      "check": "reduced-motion",
+      "pass": true,
+      "reduce": true,
+      "runningAnimations": 0,
+      "transition": "0s"
+    },
+    {
+      "check": "required-error-summary-keyboard",
+      "pass": true,
+      "summaryFocused": true,
+      "fieldFocused": true
+    },
+    {
+      "check": "optional-error-summary-expands-field",
+      "pass": true,
+      "focused": true,
+      "disclosureOpen": true,
+      "ariaInvalid": "true",
+      "describedBy": "headline-help headline-error"
+    },
+    {
+      "check": "dashboard-mobile-final",
+      "pass": true,
+      "width": 360,
+      "scrollWidth": 360,
+      "navReachable": true,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 1,
+      "route": "/",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 1440,
+      "outerWidth": 1440,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "cdpCssViewportWidth": 1440,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 1,
+      "route": "/dashboard",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 1440,
+      "outerWidth": 1440,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "cdpCssViewportWidth": 1440,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 1,
+      "route": "/profile/edit",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 1440,
+      "outerWidth": 1440,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "cdpCssViewportWidth": 1440,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 1,
+      "route": "/messages",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 1440,
+      "outerWidth": 1440,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "cdpCssViewportWidth": 1440,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 2,
+      "route": "/",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "scrollWidth": 720,
+      "overflow": false,
+      "cdpCssViewportWidth": 720,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 2,
+      "route": "/dashboard",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "scrollWidth": 720,
+      "overflow": false,
+      "cdpCssViewportWidth": 720,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 2,
+      "route": "/profile/edit",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "scrollWidth": 720,
+      "overflow": false,
+      "cdpCssViewportWidth": 720,
+      "violations": []
+    },
+    {
+      "check": "actual-browser-zoom",
+      "zoom": 2,
+      "route": "/messages",
+      "pass": true,
+      "method": "Chromium isolated profile partition.default_zoom_level.x; no Emulation.setPageScaleFactor, no deviceScaleFactor override, no emulated viewport resizing",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "scrollWidth": 720,
+      "overflow": false,
+      "cdpCssViewportWidth": 720,
+      "violations": []
+    },
+    {
+      "check": "screen-reader-and-native-mobile-keyboard",
+      "status": "unverified",
+      "reason": "No VoiceOver/NVDA or native mobile software keyboard session executed. Automated semantic checks are not a screen-reader pass."
+    }
+  ]
+}

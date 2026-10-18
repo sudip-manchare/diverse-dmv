@@ -1,0 +1,64 @@
+{
+  "testedAt": "2026-10-17T23:04:48.453Z",
+  "results": [
+    {
+      "check": "K06-office-controls-normal-hover-focus-disabled",
+      "status": "fail",
+      "error": "AssertionError",
+      "detail": "company placeholder text contrast >=4.5:1"
+    }
+  ],
+  "contrast": [
+    {
+      "label": "company input normal",
+      "originalForeground": "rgb(8, 47, 73)",
+      "foreground": "rgb(8, 47, 73)",
+      "background": "rgb(255, 255, 255)",
+      "outerBackground": "rgb(237, 245, 244)",
+      "border": "rgb(101, 140, 148)",
+      "outline": "rgb(8, 47, 73)",
+      "outlineWidth": "3px",
+      "filter": "none",
+      "opacity": "1",
+      "fontWeight": "650",
+      "fontSize": "14.08px",
+      "textRatio": 13.88,
+      "boundaryRatio": 3.31,
+      "disabledExempt": false
+    },
+    {
+      "label": "area select normal",
+      "originalForeground": "rgb(8, 47, 73)",
+      "foreground": "rgb(8, 47, 73)",
+      "background": "rgb(255, 255, 255)",
+      "outerBackground": "rgb(237, 245, 244)",
+      "border": "rgb(101, 140, 148)",
+      "outline": "rgb(8, 47, 73)",
+      "outlineWidth": "3px",
+      "filter": "none",
+      "opacity": "1",
+      "fontWeight": "650",
+      "fontSize": "14.08px",
+      "textRatio": 13.88,
+      "boundaryRatio": 3.31,
+      "disabledExempt": false
+    },
+    {
+      "label": "company placeholder",
+      "originalForeground": "oklab(0.293449 -0.0285437 -0.0564189 / 0.5)",
+      "foreground": "rgb(131, 151, 164)",
+      "background": "rgb(255, 255, 255)",
+      "outerBackground": "rgb(237, 245, 244)",
+      "border": "rgb(122, 146, 159)",
+      "outline": "rgb(122, 146, 159)",
+      "outlineWidth": "3px",
+      "filter": "none",
+      "opacity": "1",
+      "fontWeight": "650",
+      "fontSize": "14.08px",
+      "textRatio": 3.03,
+      "disabledExempt": false
+    }
+  ],
+  "method": "Browser canvas CSS color normalization and alpha compositing before WCAG luminance calculations."
+}

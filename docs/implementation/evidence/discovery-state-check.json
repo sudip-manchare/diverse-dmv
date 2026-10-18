@@ -1,0 +1,466 @@
+{
+  "recordedAt": "2026-10-17T22:32:41.674Z",
+  "environment": "Local Next.js + Firebase Auth emulator + isolated PostgreSQL + live Gemini; secondary missing-key instance for provider outage",
+  "fixtureCleanup": "Only this run’s two disposable accounts/identities/blocks/jobs/vectors removed; no other profile data changed",
+  "noResponseMocks": true,
+  "results": [
+    {
+      "check": "setup-required",
+      "status": "pass",
+      "description": "Actual unpublished/incomplete authenticated profile. Both surfaces offer setup; no example boats.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "setup_required",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "setup_required",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "ready-populated",
+      "status": "pass",
+      "description": "Actual stored Gemini candidate embeddings and shared SQL retrieval. Boat count/names exactly match authorized API results; boat/fish decoration hidden from accessibility tree.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 20
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 20
+        }
+      ]
+    },
+    {
+      "check": "ready-empty",
+      "status": "pass",
+      "description": "Real authoritative actor-specific blocks remove all eligible candidates; server returns ready with zero results, with explicit empty guidance and no decorative example profiles.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "restored-populated",
+      "status": "pass",
+      "description": "Removing this disposable actor’s test blocks restores actual eligible results on both surfaces.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "candidate-pending-query-cached",
+      "status": "pass",
+      "description": "Own candidate representation is genuinely queued/pending. Existing current input-bound query cache still retrieves real candidates; candidate indexing is not falsely treated as query pending.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "query-indexing",
+      "status": "pass",
+      "description": "A real uncached query-generation request owns the durable actor/input lease and is awaiting actual Gemini. Overlapping Dashboard/Discover requests truthfully show indexing, not empty or invented boats.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "indexing",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "indexing",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "query-indexing-complete",
+      "status": "pass",
+      "description": "The original awaited real Gemini query completed and released its lease. Both surfaces now render authorized actual vector results.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "provider-outage-current-cache",
+      "status": "pass",
+      "description": "Isolated same-code service has both Gemini key variables deliberately empty. Correctly keyed existing query cache continues serving actual stored vector results.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 200,
+          "apiState": "ready",
+          "loadedProfileCount": 20,
+          "renderedBoatCount": 20,
+          "profileIds": [
+            "6b390ee0-e32d-4b06-8877-d9a231924987",
+            "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+            "55cfab52-06ce-4d14-9ec4-5ec4a1250f59",
+            "ce658448-523a-4e9b-a590-a1c3e69d7023",
+            "df3def7a-40e6-44fc-8693-02a48fb98325",
+            "2eade869-5959-45c2-afa6-6f24efc93447",
+            "b254a0f0-435c-4a10-bba2-60915f47d10d",
+            "b63289e7-c640-4458-8255-5d51919c2624",
+            "f1bcf8b1-afb4-4633-928d-21f771104a37",
+            "7743a16f-da15-451e-b185-045f822d618d",
+            "bbfe3ceb-0e15-4647-8179-466666fe4488",
+            "fc7f7fb3-2e2f-47cb-adcb-a250342d6863",
+            "30000000-0000-4000-8000-000000000002",
+            "0611005d-a368-4fcc-8726-e7d954d0974d",
+            "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+            "32c82597-d1d8-437e-b1ae-61df38970b40",
+            "a7c4e12a-2bfa-4111-b725-7f7a54d08b79",
+            "74809dfc-9a4f-4f41-8cf8-b4f8cf6c3800",
+            "832a1e3c-47aa-463f-9298-81432917d852",
+            "85c8a40a-e435-45af-900f-4a125f9c77ec"
+          ],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "dependency-unavailable",
+      "status": "pass",
+      "description": "Committed matching edit changes input and invalidates the old query cache. Missing provider access returns real503; saved profile remains intact, Retry is offered and no boats are fabricated.",
+      "observations": [
+        {
+          "surface": "dashboard",
+          "path": "/dashboard",
+          "http": 503,
+          "apiState": "DEPENDENCY_UNAVAILABLE",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        },
+        {
+          "surface": "discover",
+          "path": "/connections/discover",
+          "http": 503,
+          "apiState": "DEPENDENCY_UNAVAILABLE",
+          "loadedProfileCount": 0,
+          "renderedBoatCount": 0,
+          "profileIds": [],
+          "hasLiteralConnect": 0
+        }
+      ]
+    },
+    {
+      "check": "failed-provider-retry",
+      "status": "pass",
+      "description": "Actual Retry returns503 without changing or losing the committed profile."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-10-17T22:47:04.791Z",
+  "providers": "Actual Firebase Authentication + Tiger Data + Gemini",
+  "fictionalAccounts": [
+    {
+      "id": "30000000-0000-4000-8000-000000000001",
+      "email": "avery@example.test"
+    },
+    {
+      "id": "30000000-0000-4000-8000-000000000002",
+      "email": "river@example.test"
+    },
+    {
+      "id": "30000000-0000-4000-8000-000000000003",
+      "email": "jules@example.test"
+    }
+  ],
+  "connectedPair": [
+    "30000000-0000-4000-8000-000000000001",
+    "30000000-0000-4000-8000-000000000002"
+  ],
+  "unrelatedAccount": "30000000-0000-4000-8000-000000000003",
+  "conversationId": "8cd1de1b-c774-4f69-962a-8d098d5229ca",
+  "persistedMessages": 2,
+  "unrelatedHistoryHttp": 404,
+  "passwordLocation": "Ignored local .env.demo; no value included",
+  "persistentFixtures": true
+}

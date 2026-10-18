@@ -1,0 +1,25 @@
+{
+  "matching": {
+    "area": "Maryland · Baltimore and surroundings · Search circle: 35.0 km. Only offices inside this circle are shown.",
+    "results": [
+      "Under Armour Global Headquarters",
+      "Under Armour Waterfront HQ Campus",
+      "Under Armour The Armoury"
+    ],
+    "searchButtons": [
+      "Search"
+    ],
+    "status": "3 offices shown · Maryland · Baltimore and surroundings"
+  },
+  "noMatch": {
+    "area": "Washington, D.C. · Search circle: 12.0 km. Only offices inside this circle are shown.",
+    "message": "No results found for “Under Armour” in Washington, D.C.. Try another area or company name.",
+    "rows": 0,
+    "status": "0 offices shown · Washington, D.C."
+  },
+  "optionalCompany": {
+    "area": "Washington, D.C. · Search circle: 12.0 km. Only offices inside this circle are shown.",
+    "count": 20,
+    "status": "20 offices shown · Washington, D.C."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-17T22:02:14.138Z",
+  "results": [
+    {
+      "provider": "PostgreSQL",
+      "status": "pass",
+      "detail": "Connected; pgvector installed. Tiger Data provenance must be checked against configured service."
+    },
+    {
+      "provider": "Gemini",
+      "status": "pass",
+      "detail": "Live 768-dimensional vector; normalized length 1.000000. No profile data used."
+    },
+    {
+      "provider": "Firebase Admin",
+      "status": "unverified",
+      "detail": "No explicit admin credentials; deployed ADC requires separate verification."
+    },
+    {
+      "provider": "Google Maps / Places",
+      "status": "unverified",
+      "detail": "Disabled pending API, billing, separate restricted keys and policy verification."
+    },
+    {
+      "provider": "Cloud Run / GoDaddy HTTPS domain",
+      "status": "unverified",
+      "detail": "No deployment or domain observation established by this script."
+    }
+  ]
+}

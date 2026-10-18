@@ -1,0 +1,210 @@
+{
+  "checkedAt": "2026-10-18T04:01:21.927Z",
+  "scope": "Live Firebase password authentication, local Next.js server sessions, Tiger Data profiles and Gemini vector recommendations. No simulated provider data. No connections or messages created.",
+  "results": [
+    {
+      "name": "Maya Chen",
+      "category": "Student",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Sage Williams · demo",
+        "Alex Kim · demo",
+        "Quinn Parker · demo",
+        "Tess Nguyen · demo",
+        "Jordan Ellis · demo"
+      ]
+    },
+    {
+      "name": "Zoe Brooks",
+      "category": "Student",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Casey Patel · demo",
+        "Jordan Ellis · demo",
+        "Tess Nguyen · demo",
+        "Rowan Shah · demo",
+        "Quinn Parker · demo"
+      ]
+    },
+    {
+      "name": "Eli Rivera",
+      "category": "Student",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Remy Davis · demo",
+        "Alex Kim · demo",
+        "Maya Chen · demo",
+        "Morgan Lee · demo",
+        "Sage Williams · demo"
+      ]
+    },
+    {
+      "name": "Quinn Parker",
+      "category": "Recruiter",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Jordan Ellis · demo",
+        "Tess Nguyen · demo",
+        "Maya Chen · demo",
+        "Zoe Brooks · demo",
+        "Alex Kim · demo"
+      ]
+    },
+    {
+      "name": "Morgan Lee",
+      "category": "Recruiter",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Eli Rivera · demo",
+        "Remy Davis · demo",
+        "Alex Kim · demo",
+        "Maya Chen · demo",
+        "Jordan Ellis · demo"
+      ]
+    },
+    {
+      "name": "Casey Patel",
+      "category": "Recruiter",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Zoe Brooks · demo",
+        "Jordan Ellis · demo",
+        "Rowan Shah · demo",
+        "Tess Nguyen · demo",
+        "Quinn Parker · demo"
+      ]
+    },
+    {
+      "name": "Sage Williams",
+      "category": "Mentor",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Maya Chen · demo",
+        "Remy Davis · demo",
+        "Alex Kim · demo",
+        "Tess Nguyen · demo",
+        "Eli Rivera · demo"
+      ]
+    },
+    {
+      "name": "Tess Nguyen",
+      "category": "Mentor",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Jordan Ellis · demo",
+        "Zoe Brooks · demo",
+        "Maya Chen · demo",
+        "Alex Kim · demo",
+        "Casey Patel · demo"
+      ]
+    },
+    {
+      "name": "Remy Davis",
+      "category": "Mentor",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Eli Rivera · demo",
+        "Morgan Lee · demo",
+        "Sage Williams · demo",
+        "Alex Kim · demo",
+        "Maya Chen · demo"
+      ]
+    },
+    {
+      "name": "Alex Kim",
+      "category": "Explorer",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Maya Chen · demo",
+        "Eli Rivera · demo",
+        "Sage Williams · demo",
+        "Jordan Ellis · demo",
+        "Remy Davis · demo"
+      ]
+    },
+    {
+      "name": "Jordan Ellis",
+      "category": "Explorer",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Tess Nguyen · demo",
+        "Zoe Brooks · demo",
+        "Rowan Shah · demo",
+        "Alex Kim · demo",
+        "Maya Chen · demo"
+      ]
+    },
+    {
+      "name": "Rowan Shah",
+      "category": "Explorer",
+      "passwordLogin": "pass",
+      "serverSession": "pass",
+      "publication": "pass",
+      "storedEmbedding": "pass",
+      "dimensions": 768,
+      "recommendations": 11,
+      "topMatches": [
+        "Jordan Ellis · demo",
+        "Zoe Brooks · demo",
+        "Tess Nguyen · demo",
+        "Casey Patel · demo",
+        "Alex Kim · demo"
+      ]
+    }
+  ]
+}

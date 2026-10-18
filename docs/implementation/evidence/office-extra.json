@@ -1,0 +1,70 @@
+{
+  "testedAt": "2026-10-17T23:02:49.541Z",
+  "results": [
+    {
+      "check": "K06-office-controls-normal-hover-focus-disabled",
+      "status": "pass",
+      "runtimeComputedStyles": true,
+      "retestEvidence": "office-contrast.json",
+      "note": "Corrected color normalization and global placeholder fix retested; use referenced evidence for contrast ratios."
+    },
+    {
+      "check": "K06-office-busy-disabled",
+      "status": "pass",
+      "actualPendingRequest": true,
+      "disabledTextExemptFromWCAGMinimum": true
+    },
+    {
+      "check": "MAP-05-actual-200pct-browser-zoom",
+      "status": "pass",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "overflow": false,
+      "method": "Native Chromium profile zoom; no pinch scale or device scale override.",
+      "offices": 20,
+      "automatedViolations": []
+    },
+    {
+      "check": "MAP-04-MAP-05-marker-keyboard-modern-event",
+      "status": "pass",
+      "markerEnterOpensDetails": true,
+      "escapeReturnsSynchronizedRow": true
+    },
+    {
+      "check": "MAP-02-company-Unicode-limit-no-truncation",
+      "status": "pass",
+      "eightyAstralCodePointsRetained": true,
+      "eightyOneRejectedBeforeProvider": true,
+      "noSilentTruncation": true
+    },
+    {
+      "check": "MAP-02-real-broad-query-pagination",
+      "status": "pass",
+      "firstPageCount": 20,
+      "nextPageCount": 18,
+      "loadedUniqueCount": 38,
+      "changedQueryTokenRejected": true,
+      "actualProviderPages": true
+    },
+    {
+      "check": "MAP-05-emulated-touch-360px",
+      "status": "pass",
+      "width": 360,
+      "touchPoints": 1,
+      "overflow": false,
+      "offices": 20,
+      "actualTouchEvents": true,
+      "nativeHandset": false
+    }
+  ],
+  "contrast": [],
+  "limitations": [
+    "Native mobile software keyboard and screen reader not tested.",
+    "This targeted office contrast matrix is not full application K06 conformance.",
+    "Production key restrictions/quota/policy/deployment are not established by demo-key browser tests."
+  ],
+  "contrastEvidence": "office-contrast.json",
+  "contrastCorrection": "Original parser did not normalize CSS oklab/alpha; those numeric readings withdrawn. Corrected browser canvas normalization found placeholder3.03:1; global placeholder fix and retest recorded separately."
+}

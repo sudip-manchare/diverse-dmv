@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-17T23:08:06.581Z",
+  "scope": "Final local production Docker image; provider-free packaging smoke, not Vercel deployment or provider readiness",
+  "image": "sha256:e8149ff5034d568416beb06e651913a6a6e0e5d3f18d3e1ccbe05b72fbb6fd64",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/api/me",
+      "status": 401,
+      "pass": true
+    },
+    {
+      "path": "/api/jobs/embeddings",
+      "status": 403,
+      "pass": true
+    },
+    {
+      "path": "/api/offices/config",
+      "status": 200,
+      "pass": true,
+      "mapsDisabled": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "check": "non-root",
+      "uid": "1001",
+      "pass": true
+    },
+    {
+      "check": "no-env-or-credential-files",
+      "count": 0,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

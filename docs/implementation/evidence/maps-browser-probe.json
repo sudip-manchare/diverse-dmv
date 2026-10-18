@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-18T05:33:47.615Z",
+  "scope": "Actual Google Maps JavaScript browser-only probe; no Places request, office coverage or key-restriction claim",
+  "source": "owner-demo-key-alias",
+  "origin": "http://localhost:3011",
+  "restrictionMetadata": "unverified: administrative key metadata unavailable",
+  "checks": [
+    {
+      "check": "actual-browser-map-and-advanced-marker",
+      "status": "pass",
+      "actual": {
+        "ready": true,
+        "tiles": true,
+        "marker": true,
+        "authFailure": false
+      }
+    },
+    {
+      "check": "map-accessible-region",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "screenshot": "maps-browser-probe.png"
+}

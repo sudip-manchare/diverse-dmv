@@ -1,0 +1,31 @@
+[
+  {
+    "check": "keyboard-hero-sdk-unavailable",
+    "pass": true,
+    "description": "Keyboard opens/traps/closes hero dialog. Disabled office provider shows honest fallback without loading SDK, and Join remains usable."
+  },
+  {
+    "check": "signed-in-hero",
+    "pass": true,
+    "description": "Server-confirmed active account activates hero directly to Dashboard."
+  },
+  {
+    "check": "publication-errors",
+    "pass": true,
+    "description": "Incomplete saved preview cannot publish; field-linked error summary retains name and safe values."
+  },
+  {
+    "check": "draft-expiry-recovery",
+    "pass": true,
+    "description": "Dirty navigation safe focus/Escape; real revoked session, same-tab login and explicit Restore recover actor-bound unsaved text. No local/session storage entries."
+  },
+  {
+    "check": "setup-state-axe",
+    "violations": []
+  },
+  {
+    "check": "password-recovery-emulator",
+    "pass": true,
+    "description": "Recovery UI acknowledged known/unknown identically; actual emulator reset code changed credential and new password authenticated. Email delivery/provider-hosted production reset unverified."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "mode": "Database-only fictional fixtures; no Firebase login provisioned",
+  "accounts": [
+    {
+      "id": "30000000-0000-4000-8000-000000000001",
+      "email": "avery@example.test"
+    },
+    {
+      "id": "30000000-0000-4000-8000-000000000002",
+      "email": "river@example.test"
+    },
+    {
+      "id": "30000000-0000-4000-8000-000000000003",
+      "email": "jules@example.test"
+    }
+  ],
+  "indexing": {
+    "completed": 3,
+    "failed": 0,
+    "obsolete": 0
+  }
+}

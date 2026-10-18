@@ -1,0 +1,10 @@
+{"evidence":"live-discovery","database":"Tiger Data hosted PostgreSQL with pgvector over TLS","storedVectors":3,"dimensions":768,"firstRecommended":"30000000-0000-4000-8000-000000000002","afterIntentChange":"30000000-0000-4000-8000-000000000003","checks":["current stored embeddings","changed intent + changed query hash","immediate unpublish","stale version exclusion","republication indexing","reverse block exclusion","expired lease recovery","in-flight stale completion rejected","provider failure preserves source + backs off","provider recovery stores latest version"]}
+✔ real Gemini → stored pgvector → changed-intent retrieval, visibility, stale-version and lease recovery (11120.815917ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11416.74325

@@ -1,0 +1,40 @@
+
+> diverse-dmv@0.1.0 test
+> node --conditions=react-server --import tsx --test tests/*.test.ts
+
+﹣ Firebase emulator token exchange, persisted private account, CSRF rejection and session revocation (0.47875ms) # SKIP
+﹣ reverse send, accept/cancel/block, request allowance and restriction races serialize (0.260917ms) # SKIP
+﹣ durable pair transactions, retry identity, history privacy, block and reconnect (0.726375ms) # SKIP
+﹣ deletion receipt, operator disabling, revoked sessions and counterpart retained history (0.538666ms) # SKIP
+✔ all valid profile fields at limits accept large Unicode, split UTF-8 and escaped surrogate encoding (49.9375ms)
+ℹ Full-limit compact Unicode profile: 191812 bytes; escaped supplementary Unicode profile: 572420 bytes.
+✔ stream without length stops and cancels once actual bytes exceed transport limit (4.182ms)
+✔ known oversized length rejects before pulling any request bytes (0.525333ms)
+✔ malformed JSON and invalid UTF-8 produce content-free validation failures (0.73375ms)
+✔ member/connection projections omit private data and scopes, retaining public cosmetic (2.804833ms)
+✔ inactive role fields never appear; independent scopes retain allowed seeking (1.056916ms)
+✔ international phone preserves country and rejects inferred country or extensions (3.661667ms)
+✔ pair normalization is symmetric (0.119875ms)
+﹣ unrelated HTTP actor cannot list, cursor-read or send into another pair (5.371292ms) # SKIP
+✔ Unicode count treats astral characters as one, combining marks explicitly separate (0.699459ms)
+✔ newcomers can publish without professional credentials or private contacts (8.38675ms)
+✔ drafts may be incomplete but publication requires every minimum field (6.690209ms)
+✔ URLs reject credential injection, deceptive LinkedIn hosts and active schemes (0.456917ms)
+✔ schema rejects unknown privileged fields, oversized Unicode and unknown fish (0.898167ms)
+✔ indexing schedulers fail closed and keep GET/POST credentials separate (6.400708ms)
+✔ embedding allowlist excludes identity, contact, cosmetics, private seeking and paused mentoring (0.700083ms)
+✔ matching input changes the query key and Unicode byte budget is bounded (0.561458ms)
+✔ vectors reject wrong dimensions, nonfinite and zero; normalized output unit length (0.22825ms)
+✔ office proxy rejects unsupported bounds, ambiguous modes and overlong search (1.163958ms)
+﹣ real Gemini → stored pgvector → changed-intent retrieval, visibility, stale-version and lease recovery (0.264666ms) # SKIP
+✔ office browser configuration uses explicit browser aliases without exposing server credentials (9.459625ms)
+✔ office company limit counts Unicode code points after trimming (101.820042ms)
+﹣ durable real query lease: overlap, cache outage, expired recovery, failure cleanup and successor protection (0.252542ms) # SKIP
+ℹ tests 27
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 7
+ℹ todo 0
+ℹ duration_ms 685.006916

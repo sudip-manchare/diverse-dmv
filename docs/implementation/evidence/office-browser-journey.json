@@ -1,0 +1,365 @@
+{
+  "testedAt": "2026-10-17T23:00:02.867Z",
+  "browser": "155.0.8059.84",
+  "environment": "Actual Google Maps JS / Places provider via explicitly enabled nonproduction demo mode; local Next.js, not production deployment.",
+  "results": [
+    {
+      "check": "MAP-08-lazy-load-before-explicit-action",
+      "status": "pass",
+      "sdkLoaded": false,
+      "officeSearchCalls": 0
+    },
+    {
+      "check": "MAP-04-hero-account-entry-separate",
+      "status": "pass",
+      "heroOpensAccountDialog": true,
+      "officeMapOutsideHeroButton": true
+    },
+    {
+      "check": "MAP-01-initial-live-Google-offices",
+      "status": "pass",
+      "count": 20,
+      "cap": 20,
+      "markersMatchList": true,
+      "headingFocused": true,
+      "actualProvider": true
+    },
+    {
+      "check": "MAP-01-regional-presets-real-provider",
+      "status": "pass",
+      "areas": [
+        {
+          "preset": "dc",
+          "count": 20,
+          "radius": 12000
+        },
+        {
+          "preset": "maryland",
+          "count": 20,
+          "radius": 20000
+        },
+        {
+          "preset": "virginia",
+          "count": 20,
+          "radius": 27000
+        },
+        {
+          "preset": "baltimore",
+          "count": 20,
+          "radius": 35000
+        }
+      ]
+    },
+    {
+      "check": "MAP-02-company-query-and-pagination",
+      "status": "pass",
+      "firstPageCount": 1,
+      "pagination": "not offered by actual provider"
+    },
+    {
+      "check": "MAP-03-explicit-area-search-only",
+      "status": "pass",
+      "panSearchCalls": 0,
+      "explicitSearchCalls": 1,
+      "radius": 12484
+    },
+    {
+      "check": "MAP-04-list-pin-details-focus-return",
+      "status": "pass",
+      "rowSelectsDetails": true,
+      "pinSelectsSameDetails": true,
+      "escapeAndCloseRestoreRow": true
+    },
+    {
+      "check": "MAP-05-desktop-list-keyboard",
+      "status": "pass",
+      "officeRowsOpenedWithKeyboard": 20,
+      "focusReturned": true,
+      "start": "First result received focus; all following rows/actions reached via Tab/Enter/Escape."
+    },
+    {
+      "check": "DIVE-05-MAP-07-attribution-and-policy-destinations",
+      "status": "pass",
+      "googleAttributionPresent": true,
+      "termsPrivacyHTTP200": true,
+      "noInventedCareersLinks": true,
+      "disclaimerVisible": true,
+      "productionRestrictions": "Not established by browser demo-key evidence."
+    },
+    {
+      "check": "MAP-05-mobile-real-results",
+      "status": "pass",
+      "mapHeight": 300,
+      "overflow": false,
+      "automatedViolations": [],
+      "touchNote": "Mobile width browser interaction; not native handset/software keyboard."
+    },
+    {
+      "check": "MAP-06-real-empty-company-query",
+      "status": "pass",
+      "actualProviderZeroResults": true
+    },
+    {
+      "check": "MAP-06-real-network-failure-and-retry",
+      "status": "pass",
+      "fault": "Browser aborted network request, no fabricated response.",
+      "retryCount": 20
+    },
+    {
+      "check": "MAP-08-SDK-blocked-account-entry-still-works",
+      "status": "pass",
+      "SDKNetworkBlocked": true,
+      "heroJoinStillNavigates": true
+    },
+    {
+      "check": "MAP-03-production-key-restrictions",
+      "status": "unverified",
+      "reason": "Nonproduction demo-key configuration does not establish separately restricted production browser/server keys, billing quotas or Cloud Run deployment."
+    },
+    {
+      "check": "MAP-06-quota-closed-missing-details",
+      "status": "unverified",
+      "reason": "Only actual provider data/failures count; no synthetic closed/missing-place/quota replies used.",
+      "observedClosed": 0,
+      "observedMissingAddress": 0
+    }
+  ],
+  "requests": [
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "metro",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "dc",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "maryland",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "virginia",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "baltimore",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "company",
+        "preset"
+      ],
+      "preset": "metro",
+      "hasCompany": true,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "dc",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "area"
+      ],
+      "hasCompany": false,
+      "hasPageToken": false,
+      "area": {
+        "lat": 38.94566662949025,
+        "lng": -77.1365622860013,
+        "radius": 12484
+      }
+    },
+    {
+      "keys": [
+        "company",
+        "preset"
+      ],
+      "preset": "dc",
+      "hasCompany": true,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "dc",
+      "hasCompany": false,
+      "hasPageToken": false
+    },
+    {
+      "keys": [
+        "preset"
+      ],
+      "preset": "dc",
+      "hasCompany": false,
+      "hasPageToken": false
+    }
+  ],
+  "responses": [
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 28000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 12000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 39.047,
+        "lng": -77.11,
+        "radius": 20000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.91,
+        "lng": -77.23,
+        "radius": 27000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 39.29,
+        "lng": -76.61,
+        "radius": 35000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 1,
+      "mode": "company",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 28000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 12000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.94566662949025,
+        "lng": -77.1365622860013,
+        "radius": 12484
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 0,
+      "mode": "company",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 12000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    },
+    {
+      "status": 200,
+      "count": 20,
+      "mode": "nearby",
+      "area": {
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "radius": 12000
+      },
+      "hasNextPage": false,
+      "closed": 0,
+      "missingAddress": 0,
+      "duplicateIds": 0
+    }
+  ]
+}

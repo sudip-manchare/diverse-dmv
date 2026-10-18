@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-17T22:33:34.376Z",
+  "scope": "Actual Next.js HTTP with three isolated fictional Firebase emulator accounts and local PostgreSQL persistence; A/B connected and C unrelated.",
+  "reproduction": "RUN_UNAUTHORIZED_HTTP_TESTS=1 node --env-file=.env.local --conditions=react-server --import tsx --test tests/backend-unauthorized-http.test.ts",
+  "noSourceMocks": true,
+  "cleanup": "Only the three disposable fixture identities and their records removed; other fixtures unchanged.",
+  "results": [
+    {
+      "check": "unrelated-list",
+      "status": "pass",
+      "httpStatus": 200,
+      "emptyAuthorizedList": true,
+      "noMessageBodyPreviewPhoneEmailOrPairId": true
+    },
+    {
+      "check": "unrelated-direct-history",
+      "status": "pass",
+      "httpStatus": 404,
+      "errorCode": "UNAVAILABLE",
+      "neutralError": true,
+      "noMessageBodyPreviewPhoneEmailOrPairId": true
+    },
+    {
+      "check": "unrelated-before-cursor",
+      "status": "pass",
+      "httpStatus": 404,
+      "errorCode": "UNAVAILABLE",
+      "neutralError": true,
+      "noMessageBodyPreviewPhoneEmailOrPairId": true
+    },
+    {
+      "check": "unrelated-after-cursor",
+      "status": "pass",
+      "httpStatus": 404,
+      "errorCode": "UNAVAILABLE",
+      "neutralError": true,
+      "noMessageBodyPreviewPhoneEmailOrPairId": true
+    },
+    {
+      "check": "unrelated-direct-send",
+      "status": "pass",
+      "httpStatus": 403,
+      "errorCode": "NOT_ALLOWED",
+      "neutralError": true,
+      "noMessageBodyPreviewPhoneEmailOrPairId": true
+    },
+    {
+      "check": "authorized-state-preserved",
+      "status": "pass",
+      "allThreeSessionsStillValid": true,
+      "pairHistoryStillReadable": true,
+      "connectedPairStillCanMessage": true,
+      "persistedMessageCount": 1,
+      "unrelatedSavedMessageCount": 0
+    }
+  ]
+}

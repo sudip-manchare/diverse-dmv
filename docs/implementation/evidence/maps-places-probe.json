@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-18T05:33:57.295Z",
+  "scope": "Actual bounded Places API (New) request through application service, no mocked response and no stored Places content",
+  "configuration": {
+    "enabled": true,
+    "demo": true,
+    "separateServerCredential": false
+  },
+  "request": {
+    "preset": "dc",
+    "maxResultCount": 20,
+    "type": "corporate_office"
+  },
+  "checks": [
+    {
+      "check": "real-places-nearby-bounded-search",
+      "status": "pass",
+      "count": 20,
+      "atMost20": true,
+      "allWithinRequestedCircle": true,
+      "noPermanentClosure": true,
+      "attributionFieldsPresent": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# LEGACY OPTIONAL EXAMPLE. The owner selected Vercel, with portable/Render as an optional fallback.
+# Cloud Run is not an active requirement; do not apply this manifest by default.
+# Replace PROJECT_ID / runtime service account / image before applying.
+# Exactly one web service contains the Next UI and all route handlers.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: diverse-dmv
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '3'
+        autoscaling.knative.dev/minScale: '0'
+        run.googleapis.com/startup-cpu-boost: 'true'
+    spec:
+      serviceAccountName: diverse-dmv-runtime@PROJECT_ID.iam.gserviceaccount.com
+      containerConcurrency: 40
+      timeoutSeconds: 120
+      containers:
+        - image: us-east1-docker.pkg.dev/PROJECT_ID/apps/diverse-dmv:RELEASE_SHA
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: '1'
+              memory: 512Mi
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 10
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: DB_POOL_MAX
+              value: '5'
+            - name: GOOGLE_MAPS_ENABLED
+              value: 'false'
+            # Add all server secrets as valueFrom.secretKeyRef, never plain text.

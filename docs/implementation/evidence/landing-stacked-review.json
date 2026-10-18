@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-17T23:26:10.832Z",
+  "scope": "Landing layout follow-up; current dev source, earlier production build predates this change. Reflow720 is not native browser zoom.",
+  "results": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "copyTop": 113.03125,
+      "copyBottom": 261.6875,
+      "mapTop": 273.6875,
+      "mapBottom": 833.6875,
+      "mapWidth": 1100,
+      "overflow": false,
+      "mobileInsetOverlap": false,
+      "violations": []
+    },
+    {
+      "name": "laptop",
+      "width": 1365,
+      "height": 768,
+      "copyTop": 113.03125,
+      "copyBottom": 258.71875,
+      "mapTop": 270.71875,
+      "mapBottom": 718.71875,
+      "mapWidth": 1100,
+      "overflow": false,
+      "mobileInsetOverlap": false,
+      "violations": []
+    },
+    {
+      "name": "mobile",
+      "width": 360,
+      "height": 800,
+      "copyTop": 84,
+      "copyBottom": 294.03125,
+      "mapTop": 302.03125,
+      "mapBottom": 735.453125,
+      "mapWidth": 328,
+      "overflow": false,
+      "mobileInsetOverlap": false,
+      "violations": []
+    },
+    {
+      "name": "reflow",
+      "width": 720,
+      "height": 900,
+      "copyTop": 113.03125,
+      "copyBottom": 265.453125,
+      "mapTop": 277.453125,
+      "mapBottom": 837.453125,
+      "mapWidth": 656,
+      "overflow": false,
+      "mobileInsetOverlap": false,
+      "violations": []
+    },
+    {
+      "dialogKeyboardActivation": true,
+      "dialogClosed": true,
+      "focusReturned": true
+    }
+  ]
+}

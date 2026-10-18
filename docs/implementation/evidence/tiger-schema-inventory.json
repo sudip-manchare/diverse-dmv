@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-17T22:48:26.202Z",
+  "database": "Supplied hosted Tiger Data",
+  "createdProgrammatically": true,
+  "tables": [
+    "accounts",
+    "blocks",
+    "connections",
+    "conversations",
+    "deletion_requests",
+    "embedding_jobs",
+    "messages",
+    "operations",
+    "pairs",
+    "profile_embeddings",
+    "profiles",
+    "provider_budgets",
+    "query_embedding_leases",
+    "query_embeddings",
+    "rate_limits",
+    "requests",
+    "schema_migrations",
+    "sessions"
+  ],
+  "migrations": [
+    {
+      "name": "001-core.sql",
+      "sha256": "4afdfc82a29923522f1c1a5e4922d53ff7332ecd718723f33e5940d89d75d0e4",
+      "applied_at": "2026-10-17T22:19:32.123Z"
+    },
+    {
+      "name": "002-discovery.sql",
+      "sha256": "824c460f9bccde219345dfe0cb4a7949bfef4339f119a5a12c65a55a1fe4af1a",
+      "applied_at": "2026-10-17T22:19:32.323Z"
+    },
+    {
+      "name": "003-query-leases.sql",
+      "sha256": "62d6df31789794d95473d78ddb2bf8b8e77a93d5baae9e07f112aa479009640b",
+      "applied_at": "2026-10-17T22:29:47.651Z"
+    }
+  ],
+  "storedVectorCount": 3
+}

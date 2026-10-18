@@ -1,0 +1,135 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.05kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 281B done
+#3 DONE 0.0s
+
+#4 [dependencies 1/4] FROM docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392
+#4 resolve docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 53.57kB 0.0s done
+#5 DONE 0.0s
+
+#6 [dependencies 2/4] WORKDIR /app
+#6 CACHED
+
+#7 [dependencies 3/4] COPY package.json package-lock.json ./
+#7 CACHED
+
+#8 [dependencies 4/4] RUN npm ci
+#8 CACHED
+
+#9 [build 1/2] COPY . .
+#9 DONE 0.0s
+
+#10 [build 2/2] RUN npm run build
+#10 0.159 
+#10 0.159 > diverse-dmv@0.1.0 build
+#10 0.159 > next build --webpack
+#10 0.159 
+#10 0.374 ▲ Next.js 16.4.2 (webpack)
+#10 0.394 ✓ Running next.config.ts took 20ms
+#10 0.398 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#10 0.398 This information is used to shape Next.js' roadmap and prioritize features.
+#10 0.398 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#10 0.398 https://nextjs.org/telemetry
+#10 0.398 
+#10 0.420 
+#10 0.446   Creating an optimized production build ...
+#10 7.707 ✓ Compiled successfully in 6.1s
+#10 7.710   Running TypeScript ...
+#10 10.84   Finished TypeScript in 3.1s ...
+#10 10.84   Collecting page data using 9 workers ...
+#10 11.86   Generating static pages using 9 workers (0/34) ...
+#10 11.91   Generating static pages using 9 workers (8/34) 
+#10 12.06   Generating static pages using 9 workers (16/34) 
+#10 12.06   Generating static pages using 9 workers (25/34) 
+#10 12.13 ✓ Generating static pages using 9 workers (34/34) in 271ms
+#10 12.26   Finalizing page optimization ...
+#10 12.26   Collecting build traces ...
+#10 20.82 
+#10 20.82 Route (app)
+#10 20.82 ┌ ○ /
+#10 20.82 ├ ○ /_not-found
+#10 20.82 ├ ƒ /api/blocks
+#10 20.82 ├ ƒ /api/blocks/[id]
+#10 20.82 ├ ƒ /api/connections
+#10 20.82 ├ ƒ /api/connections/[id]
+#10 20.82 ├ ƒ /api/conversations
+#10 20.82 ├ ƒ /api/conversations/[id]/messages
+#10 20.82 ├ ƒ /api/conversations/send
+#10 20.82 ├ ƒ /api/deletion-requests
+#10 20.82 ├ ƒ /api/health
+#10 20.82 ├ ƒ /api/jobs/embeddings
+#10 20.82 ├ ƒ /api/me
+#10 20.82 ├ ƒ /api/me/profile
+#10 20.82 ├ ƒ /api/me/profile/publish
+#10 20.82 ├ ƒ /api/me/profile/reindex
+#10 20.82 ├ ƒ /api/me/profile/unpublish
+#10 20.82 ├ ƒ /api/offices/config
+#10 20.82 ├ ƒ /api/offices/search
+#10 20.82 ├ ƒ /api/profiles/[id]
+#10 20.82 ├ ƒ /api/recommendations
+#10 20.82 ├ ƒ /api/requests
+#10 20.82 ├ ƒ /api/requests/[id]/accept
+#10 20.82 ├ ƒ /api/requests/[id]/cancel
+#10 20.82 ├ ƒ /api/requests/[id]/decline
+#10 20.82 ├ ƒ /api/session
+#10 20.82 ├ ○ /connections/discover
+#10 20.82 ├ ○ /connections/mine
+#10 20.82 ├ ○ /connections/requests
+#10 20.82 ├ ○ /dashboard
+#10 20.82 ├ ○ /icon.svg
+#10 20.82 ├ ○ /login
+#10 20.82 ├ ƒ /members/[id]
+#10 20.82 ├ ○ /messages
+#10 20.82 ├ ƒ /messages/[id]
+#10 20.82 ├ ○ /privacy
+#10 20.82 ├ ○ /profile
+#10 20.82 ├ ○ /profile/edit
+#10 20.82 ├ ○ /profile/setup
+#10 20.82 ├ ○ /recover
+#10 20.82 ├ ○ /settings
+#10 20.82 ├ ○ /signup
+#10 20.82 └ ○ /terms
+#10 20.82 
+#10 20.82 
+#10 20.82 ○  (Static)   prerendered as static content
+#10 20.82 ƒ  (Dynamic)  server-rendered on demand
+#10 20.82 
+#10 DONE 20.9s
+
+#11 [runner 3/6] RUN groupadd --system --gid 1001 nodejs && useradd --system --uid 1001 --gid nodejs nextjs
+#11 CACHED
+
+#12 [runner 4/6] COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
+#12 DONE 0.3s
+
+#13 [runner 5/6] COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
+#13 DONE 0.0s
+
+#14 [runner 6/6] COPY --from=build --chown=nextjs:nodejs /app/public ./public
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 1.4s done
+#15 exporting manifest sha256:bb392cfdecb423a2c4c765353d1ff17cff62d553d58807156ceacf131f0e81b2 done
+#15 exporting config sha256:d9c68f0ee0e5b8d0d9ac818a031d66985c9cf81d6739520f6481ab2b44bbff40 done
+#15 exporting attestation manifest sha256:ae4315b18d8054c5088cdf212d1d5793a3ad17794bfa385992883307bd9eb8da done
+#15 exporting manifest list sha256:e8149ff5034d568416beb06e651913a6a6e0e5d3f18d3e1ccbe05b72fbb6fd64 done
+#15 naming to docker.io/library/diverse-dmv:review done
+#15 unpacking to docker.io/library/diverse-dmv:review
+#15 unpacking to docker.io/library/diverse-dmv:review 0.4s done
+#15 DONE 1.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/7dtcjs3ezx19s4cxe1o665v6n

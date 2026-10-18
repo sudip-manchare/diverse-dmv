@@ -1,0 +1,66 @@
+{
+  "testedAt": "2026-10-17T22:51:37.506Z",
+  "browser": "155.0.8059.84",
+  "environment": "Actual Firebase Authentication and Admin verification; configured Tiger Data PostgreSQL; live Gemini; localhost Next.js UI, not Cloud Run.",
+  "results": [
+    {
+      "check": "live-browser-journey-aborted",
+      "pass": false,
+      "stage": "UI signup A",
+      "uiAlerts": [[""], [], []],
+      "providerHostsObserved": ["identitytoolkit.googleapis.com"],
+      "network": [
+        {
+          "path": "/v2/passwordPolicy",
+          "status": 200
+        },
+        {
+          "path": "/v2/passwordPolicy",
+          "status": 200
+        }
+      ],
+      "formState": {
+        "buttons": [
+          {
+            "text": "Show",
+            "disabled": false
+          },
+          {
+            "text": "Create account",
+            "disabled": false
+          }
+        ],
+        "invalid": [
+          {
+            "id": ""
+          },
+          {
+            "id": "name",
+            "reason": "Please fill out this field."
+          },
+          {
+            "id": "email",
+            "reason": "Please fill out this field."
+          },
+          {
+            "id": "password",
+            "reason": "Please fill out this field."
+          }
+        ],
+        "policy": "At least 6 characters."
+      },
+      "locationPaths": ["/signup", "blank", "blank"],
+      "error": "TimeoutError"
+    }
+  ],
+  "cleanup": [
+    {
+      "pass": true,
+      "scope": "Only this run\u2019s attempted fictional Firebase identities and matching Tiger Data account/pair/profile/vector/session/message records removed."
+    }
+  ],
+  "fixtureMetadata": "/tmp/diverse-dmv-live-browser-fixtures-7f047f3e.json",
+  "classification": "Harness navigation readiness failure; not application or provider failure",
+  "rootCause": "page.goto(waitUntil=networkidle) timed out before input fill or Create account action. Development connections did not become idle. Replaced with domcontentloaded plus rendered provider-policy readiness. The complete live UI journey then passed.",
+  "retestEvidence": "live-browser-journey.json"
+}

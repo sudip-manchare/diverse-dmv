@@ -1,0 +1,53 @@
+[
+  {
+    "check": "signup-minimal",
+    "pass": true,
+    "description": "UI signup skipped phone/LinkedIn, server account persisted, dashboard accessible."
+  },
+  {
+    "check": "profile-ui-publication",
+    "pass": true,
+    "description": "Actual UI minimal setup, saved member/connection preview and explicit publication; B/C real persisted fictional profiles."
+  },
+  {
+    "check": "dashboard-axe",
+    "violations": []
+  },
+  {
+    "check": "requests-and-durable-history",
+    "pass": true,
+    "description": "Real persisted request, retry identity, unrelated acceptance/history/list denial, mutual connection, two-way messages, same-operation retry exactly once and history after logout/login."
+  },
+  {
+    "check": "uncertain-send-ui-and-delivery",
+    "pass": true,
+    "visibleMs": 2308,
+    "description": "Lost real commit response retained composer and operation; explicit UI retry produced exactly one stored message. Incoming message observed in second browser."
+  },
+  {
+    "check": "chat-axe",
+    "violations": []
+  },
+  {
+    "check": "ui-relogin-history",
+    "pass": true,
+    "description": "Actual Log out and Log in UI reopened the persisted thread including retried message."
+  },
+  {
+    "check": "remove-block-unblock",
+    "pass": true,
+    "description": "Removal retained read-only history and stopped sending; block hid both directions/direct profile; unblock restored history without connection."
+  },
+  {
+    "check": "accounts",
+    "ids": {
+      "A": "3fec6f9d-7612-4909-b0df-93c4fc098cc8",
+      "B": "19e4caf3-e5ed-4f9d-ad6c-a4f4e3182b57",
+      "C": "12eebcb2-a54b-47bb-b436-4e470c1b47ab"
+    },
+    "emulator": true,
+    "localPostgres": true,
+    "gemini": "live",
+    "deployment": false
+  }
+]

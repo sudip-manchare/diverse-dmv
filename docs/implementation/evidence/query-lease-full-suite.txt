@@ -1,0 +1,34 @@
+✔ Firebase emulator token exchange, persisted private account, CSRF rejection and session revocation (334.037ms)
+✔ reverse send, accept/cancel/block, request allowance and restriction races serialize (735.9665ms)
+✔ durable pair transactions, retry identity, history privacy, block and reconnect (873.975042ms)
+✔ deletion receipt, operator disabling, revoked sessions and counterpart retained history (1230.94325ms)
+✔ all valid profile fields at limits accept large Unicode, split UTF-8 and escaped surrogate encoding (35.147416ms)
+ℹ Full-limit compact Unicode profile: 191812 bytes; escaped supplementary Unicode profile: 572420 bytes.
+✔ stream without length stops and cancels once actual bytes exceed transport limit (22.087083ms)
+✔ known oversized length rejects before pulling any request bytes (1.159292ms)
+✔ malformed JSON and invalid UTF-8 produce content-free validation failures (3.55575ms)
+✔ member/connection projections omit private data and scopes, retaining public cosmetic (0.690958ms)
+✔ inactive role fields never appear; independent scopes retain allowed seeking (0.08225ms)
+✔ international phone preserves country and rejects inferred country or extensions (3.166458ms)
+✔ pair normalization is symmetric (0.064125ms)
+✔ unrelated HTTP actor cannot list, cursor-read or send into another pair (752.626625ms)
+✔ Unicode count treats astral characters as one, combining marks explicitly separate (0.351625ms)
+✔ newcomers can publish without professional credentials or private contacts (2.20825ms)
+✔ drafts may be incomplete but publication requires every minimum field (2.236458ms)
+✔ URLs reject credential injection, deceptive LinkedIn hosts and active schemes (0.211ms)
+✔ schema rejects unknown privileged fields, oversized Unicode and unknown fish (0.184208ms)
+✔ embedding allowlist excludes identity, contact, cosmetics, private seeking and paused mentoring (0.679458ms)
+✔ matching input changes the query key and Unicode byte budget is bounded (0.564417ms)
+✔ vectors reject wrong dimensions, nonfinite and zero; normalized output unit length (0.233834ms)
+✔ office proxy rejects unsupported bounds, ambiguous modes and overlong search (2.226083ms)
+{"evidence":"live-discovery","database":"local PostgreSQL 17 + pgvector (not Tiger Data)","storedVectors":3,"dimensions":768,"firstRecommended":"30000000-0000-4000-8000-000000000002","afterIntentChange":"30000000-0000-4000-8000-000000000003","checks":["current stored embeddings","changed intent + changed query hash","immediate unpublish","stale version exclusion","republication indexing","reverse block exclusion","expired lease recovery","in-flight stale completion rejected","provider failure preserves source + backs off","provider recovery stores latest version"]}
+✔ real Gemini → stored pgvector → changed-intent retrieval, visibility, stale-version and lease recovery (1893.073833ms)
+✔ durable real query lease: overlap, cache outage, expired recovery, failure cleanup and successor protection (720.478958ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2559.596208

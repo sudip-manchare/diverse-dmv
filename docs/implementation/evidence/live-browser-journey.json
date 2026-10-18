@@ -1,0 +1,86 @@
+{
+  "testedAt": "2026-10-17T22:56:00.058Z",
+  "browser": "155.0.8059.84",
+  "environment": "Actual Firebase Authentication and Admin verification; configured Tiger Data PostgreSQL; live Gemini; localhost Next.js UI, not Cloud Run.",
+  "results": [
+    {
+      "check": "live-ui-signup-profile-publication",
+      "actor": "A",
+      "pass": true,
+      "optionalPhoneLinkedInSkipped": true,
+      "fictional": true,
+      "sourceVersion": 4,
+      "indexingStatus": "ready",
+      "description": "Real Firebase UI signup, server session, UI profile setup, both saved audience previews, explicit Publish profile."
+    },
+    {
+      "check": "live-ui-signup-profile-publication",
+      "actor": "B",
+      "pass": true,
+      "optionalPhoneLinkedInSkipped": true,
+      "fictional": true,
+      "sourceVersion": 4,
+      "indexingStatus": "ready",
+      "description": "Real Firebase UI signup, server session, UI profile setup, both saved audience previews, explicit Publish profile."
+    },
+    {
+      "check": "live-ui-signup-profile-publication",
+      "actor": "C",
+      "pass": true,
+      "optionalPhoneLinkedInSkipped": true,
+      "fictional": true,
+      "sourceVersion": 4,
+      "indexingStatus": "ready",
+      "description": "Real Firebase UI signup, server session, UI profile setup, both saved audience previews, explicit Publish profile."
+    },
+    {
+      "check": "live-stored-vector-discovery-ui",
+      "pass": true,
+      "description": "Real live Gemini/Tiger Data recommendation response included fictional member B and UI rendered their boat and literal Connect action."
+    },
+    {
+      "check": "live-ui-mutual-connection-two-way-chat",
+      "pass": true,
+      "visibleMs": 1314,
+      "description": "Persisted request and explicit acceptance through separate browsers, first-message canonical thread, two-way UI messaging stored in Tiger Data."
+    },
+    {
+      "check": "live-third-account-thread-denial",
+      "pass": true,
+      "description": "Unrelated real Firebase account C received no A/B history or conversation-list entry."
+    },
+    {
+      "check": "live-lost-commit-response-ui-retry",
+      "pass": true,
+      "description": "Real server committed to Tiger Data before test dropped response; UI retained immutable snapshot and explicit same-operation retry returned exactly one persisted message. No mocked persistence or API body."
+    },
+    {
+      "check": "live-ui-relogin-refreshed-history",
+      "pass": true,
+      "messageCount": 3,
+      "description": "Actual Firebase UI logout/login, Messages list reopen and browser refresh preserved same ordered two-participant history including safely retried message."
+    },
+    {
+      "check": "live-mobile-chat-accessibility",
+      "pass": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "check": "actual-live-provider-boundary",
+      "pass": true,
+      "firebaseHostObserved": "identitytoolkit.googleapis.com",
+      "firebaseEmulatorRequests": 0,
+      "managedTigerConfigured": true,
+      "gemini": "real",
+      "cloudRunDeployment": false
+    }
+  ],
+  "cleanup": [
+    {
+      "pass": true,
+      "scope": "Only this run’s attempted fictional Firebase identities and matching Tiger Data account/pair/profile/vector/session/message records removed."
+    }
+  ],
+  "fixtureMetadata": "/tmp/diverse-dmv-live-browser-fixtures-99a6e2ba.json"
+}

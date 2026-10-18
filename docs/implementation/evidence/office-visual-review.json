@@ -1,0 +1,9 @@
+{
+  "testedAt": "2026-10-17T23:06:53.767Z",
+  "provider": "Actual Google Maps/Places nonproduction demo mode",
+  "count": 20,
+  "desktopWidth": 1440,
+  "mobileWidth": 360,
+  "focus": "Search this area inside captured office region; no clipped off-section skip link.",
+  "overflow": false
+}

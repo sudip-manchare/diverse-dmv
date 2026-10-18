@@ -1,0 +1,10 @@
+✔ reverse send, accept/cancel/block, request allowance and restriction races serialize (12858.879584ms)
+✔ durable pair transactions, retry identity, history privacy, block and reconnect (19421.812708ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19547.262708

@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-17T22:34:04.229Z",
+  "provider": "Supplied Firebase browser project",
+  "browserConfigPresent": true,
+  "adminCredential": "unavailable",
+  "scope": "Direct provider identity probe only; not application session integration",
+  "identityCreateStatus": 200,
+  "identityCreate": "pass",
+  "fixtureDeleteStatus": 200,
+  "fixtureRemoved": true,
+  "retest": {
+    "initial": "CONFIGURATION_NOT_FOUND",
+    "ownerAction": "Enabled Firebase Authentication",
+    "current": "pass for direct identity creation and deletion; server session unverified"
+  }
+}

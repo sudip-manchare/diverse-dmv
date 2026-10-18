@@ -1,0 +1,52 @@
+{
+  "recordedDate": "2026-10-17",
+  "providers": [
+    {
+      "provider": "Gemini",
+      "status": "pass",
+      "scope": "Live gemini-embedding-001 document/query calls; normalized768-dimensional vectors stored and retrieved",
+      "evidence": "tiger-discovery-live.txt"
+    },
+    {
+      "provider": "Tiger Data",
+      "status": "pass",
+      "scope": "Actual hosted PostgreSQL over TLS1.3; 18 application/migration tables from three migrations; current Gemini vectors, persisted mutual connections and messages; Firebase-backed Avery/River/Jules retained.",
+      "evidence": "live-demo-ready.json",
+      "additionalEvidence": [
+        "live-provider-check.json",
+        "tiger-final-state.json"
+      ]
+    },
+    {
+      "provider": "Firebase live project",
+      "status": "pass",
+      "scope": "Actual browser signup/password login, Firebase Admin identity lookup, application session persistence/revocation and operator account disabling verified together with Tiger Data and Gemini through local Next.js. Recovery email delivery remains unverified.",
+      "evidence": "live-provider-check.json"
+    },
+    {
+      "provider": "Firebase emulator",
+      "status": "pass",
+      "scope": "Local signup/session/recovery/revocation/deletion operation tests; not production email delivery",
+      "evidence": "test-output.txt"
+    },
+    {
+      "provider": "Google Maps/Places",
+      "status": "pass",
+      "scope": "Actual Google Maps JS and Places API(New) prototype with owner-approved explicit demo mode: regional/company/area searches, real pagination, marker/list synchronization and fallback executed. Production restrictions and remaining acceptance edge states unverified.",
+      "ownerAction": "No additional key needed for prototype. Separate restricted production keys and applicable policy/quotas remain launch requirements.",
+      "evidence": "office-browser-journey.json",
+      "additionalEvidence": [
+        "maps-places-probe.json",
+        "office-extra.json"
+      ]
+    },
+    {
+      "provider": "Vercel deployment and HTTPS domain",
+      "status": "unverified",
+      "scope": "Owner canceled Cloud Run, selected Vercel and chose to handle hosting themselves. Deployment is deferred to the owner; no deployed Vercel URL or custom domain verified.",
+      "evidence": "container-smoke.json",
+      "ownerAction": "Owner-managed follow-up using deployment runbook; no hosting login requested for this handoff."
+    }
+  ],
+  "updatedFrom": "live-provider-check.json and live-demo-ready.json"
+}

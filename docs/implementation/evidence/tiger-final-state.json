@@ -1,0 +1,94 @@
+{
+  "recordedAt": "2026-10-17T22:33:58.529Z",
+  "database": "User-supplied Tiger Data hosted PostgreSQL",
+  "transport": {
+    "ssl": true,
+    "version": "TLSv1.3",
+    "cipher": "TLS_AES_256_GCM_SHA384"
+  },
+  "extensions": [
+    {
+      "extname": "pgcrypto",
+      "extversion": "1.4"
+    },
+    {
+      "extname": "vector",
+      "extversion": "0.8.7"
+    }
+  ],
+  "migrations": [
+    {
+      "name": "001-core.sql",
+      "sha256": "4afdfc82a29923522f1c1a5e4922d53ff7332ecd718723f33e5940d89d75d0e4",
+      "applied_at": "2026-10-17T22:19:32.123Z"
+    },
+    {
+      "name": "002-discovery.sql",
+      "sha256": "824c460f9bccde219345dfe0cb4a7949bfef4339f119a5a12c65a55a1fe4af1a",
+      "applied_at": "2026-10-17T22:19:32.323Z"
+    },
+    {
+      "name": "003-query-leases.sql",
+      "sha256": "62d6df31789794d95473d78ddb2bf8b8e77a93d5baae9e07f112aa479009640b",
+      "applied_at": "2026-10-17T22:29:47.651Z"
+    }
+  ],
+  "fictionalProfiles": [
+    {
+      "account_id": "30000000-0000-4000-8000-000000000001",
+      "version": 3,
+      "published": true,
+      "indexing_status": "ready",
+      "fictional": "true",
+      "source_version": 3,
+      "model": "gemini-embedding-001",
+      "dimensions": 768,
+      "stored_dimensions": 768
+    },
+    {
+      "account_id": "30000000-0000-4000-8000-000000000002",
+      "version": 2,
+      "published": true,
+      "indexing_status": "ready",
+      "fictional": "true",
+      "source_version": 2,
+      "model": "gemini-embedding-001",
+      "dimensions": 768,
+      "stored_dimensions": 768
+    },
+    {
+      "account_id": "30000000-0000-4000-8000-000000000003",
+      "version": 3,
+      "published": true,
+      "indexing_status": "ready",
+      "fictional": "true",
+      "source_version": 3,
+      "model": "gemini-embedding-001",
+      "dimensions": 768,
+      "stored_dimensions": 768
+    }
+  ],
+  "jobCounts": [
+    {
+      "status": "complete",
+      "count": 6
+    },
+    {
+      "status": "obsolete",
+      "count": 1
+    }
+  ],
+  "remainingRowCounts": {
+    "accounts": 3,
+    "profiles": 3,
+    "vectors": 3,
+    "conversations": 0,
+    "messages": 0
+  },
+  "notes": [
+    "No endpoint URL, username, password, raw profile prose or messages included.",
+    "Three fictional fixtures intentionally retained; test-generated temporary accounts cleaned up.",
+    "No Firebase accounts provisioned by database-only seeding.",
+    "Existing nonapplication pg_buffercache views preserved."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-17T22:33:34.824Z",
+  "scope": "Local PostgreSQL + Firebase Auth emulator + Next.js development API; not production deletion/retention verification",
+  "reproduction": "RUN_DELETION_TESTS=1 with isolated local DATABASE_URL, DATABASE_SSL=disable, FIREBASE_PROJECT_ID=demo-diverse-dmv, FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099, APP_ORIGIN=http://127.0.0.1:3000; node --conditions=react-server --import tsx --test tests/backend-deletion.test.ts",
+  "receipt": {
+    "status": "pass",
+    "requestOnlyKeepsAccess": true,
+    "retryDeduplicated": true,
+    "doesNotClaimErasure": true
+  },
+  "providerFailure": {
+    "status": "pass",
+    "simulatedUnavailableLocalEmulator": true,
+    "operatorFailedHonestly": true,
+    "applicationAccessAlreadyRevoked": true,
+    "oldCookieHttpStatus": 401
+  },
+  "operator": {
+    "status": "pass",
+    "appAccountDisabled": true,
+    "appSessionRevoked": true,
+    "oldCookieHttpStatus": 401,
+    "profileUnpublished": true,
+    "firebaseUserDisabled": true,
+    "firebaseTokenRevocationRecorded": true,
+    "deletionStatus": "processing"
+  },
+  "counterpart": {
+    "status": "pass",
+    "historyRetained": true,
+    "canMessage": false,
+    "label": "Unavailable member",
+    "directProfileHttpStatus": 404,
+    "sendDeniedHttpStatus": 404
+  },
+  "retry": {
+    "status": "pass",
+    "stillDisabled": true,
+    "sourceVersionUnchanged": true,
+    "noErasureClaim": true
+  },
+  "regression": {
+    "initialResult": "fail",
+    "cause": "Repeating operator processing unnecessarily incremented the profile source version.",
+    "fix": "Invalidate source only on initial active-account disable or a still-published profile; preserve completed account/request states.",
+    "retest": "pass",
+    "sourceVersionStableOnRepeat": true
+  },
+  "result": "pass",
+  "fixtureCleanup": "Only disposable fixture account IDs and Auth emulator UIDs removed; other fixtures unchanged."
+}

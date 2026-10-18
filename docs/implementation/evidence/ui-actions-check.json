@@ -1,0 +1,12 @@
+[
+  {
+    "check": "request-accept-first-message-keyboard",
+    "pass": true,
+    "description": "360px sender and desktop receiver used actual request, acceptance and first-message UI; keyboard activation, refreshed pending request and canonical saved thread."
+  },
+  {
+    "check": "safety-settings-ui",
+    "pass": true,
+    "description": "Remove confirmation safe focus/Escape, actual removal/read-only history, block/unblock without reconnection, unpublish persisted from Settings, deletion request clearly receipt only."
+  }
+]

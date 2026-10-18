@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-17T23:09:36.039Z",
+  "scope": "Read-only final hosted Tiger Data verification; no account contacts or message contents read",
+  "tables": 18,
+  "migrations": 3,
+  "currentFictional768Vectors": 3,
+  "persistedFictionalDemoMessages": 2,
+  "pass": true
+}

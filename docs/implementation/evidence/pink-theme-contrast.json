@@ -1,0 +1,50 @@
+[
+  {
+    "name": "main text",
+    "foreground": "#381525",
+    "background": "#fff8fb",
+    "contrast": 15.41
+  },
+  {
+    "name": "muted text",
+    "foreground": "#70465a",
+    "background": "#fff7fa",
+    "contrast": 7.35
+  },
+  {
+    "name": "button",
+    "foreground": "#4c102b",
+    "background": "#f9a8c9",
+    "contrast": 8.1
+  },
+  {
+    "name": "accent",
+    "foreground": "#a52660",
+    "background": "#fff7fa",
+    "contrast": 6.55
+  },
+  {
+    "name": "dark surface text",
+    "foreground": "#f2ccdd",
+    "background": "#4c102b",
+    "contrast": 10.21
+  },
+  {
+    "name": "focus",
+    "foreground": "#9d174d",
+    "background": "#fff8fb",
+    "contrast": 7.54
+  },
+  {
+    "name": "office input border",
+    "foreground": "#a16a83",
+    "background": "#ffffff",
+    "contrast": 4.28
+  },
+  {
+    "name": "office pin glyph",
+    "foreground": "#ffffff",
+    "background": "#a52660",
+    "contrast": 6.89
+  }
+]

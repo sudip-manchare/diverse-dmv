@@ -1,0 +1,19 @@
+[
+  {
+    "check": "history-anchor-new-message-focus",
+    "pass": true,
+    "earlierCount": 42,
+    "anchorShiftPixels": -0.140625,
+    "description": "Real saved history prepended without anchor movement; incoming while reading older retained position and composer focus, with working Go to latest."
+  },
+  {
+    "check": "chat-expiry-account-switch",
+    "pass": true,
+    "description": "Revoked session hid protected content. Same-account login recovered volatile unsent draft only after thread reauthorization; different-account login showed no prior draft and no browser storage."
+  },
+  {
+    "check": "partial-signup-recovery",
+    "pass": true,
+    "description": "Firebase creation succeeded while app session request was aborted; later login recovered original name and provisioned the same app account idempotently."
+  }
+]

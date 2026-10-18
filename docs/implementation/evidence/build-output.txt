@@ -1,0 +1,66 @@
+▲ Next.js 16.4.2 (webpack)
+- Environments: .env.local, .env
+✓ Running next.config.ts took 46ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.4s
+  Running TypeScript ...
+  Finished TypeScript in 1032ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/34) ...
+  Generating static pages using 9 workers (8/34) 
+  Generating static pages using 9 workers (16/34) 
+  Generating static pages using 9 workers (25/34) 
+✓ Generating static pages using 9 workers (34/34) in 181ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/blocks
+├ ƒ /api/blocks/[id]
+├ ƒ /api/connections
+├ ƒ /api/connections/[id]
+├ ƒ /api/conversations
+├ ƒ /api/conversations/[id]/messages
+├ ƒ /api/conversations/send
+├ ƒ /api/deletion-requests
+├ ƒ /api/health
+├ ƒ /api/jobs/embeddings
+├ ƒ /api/me
+├ ƒ /api/me/profile
+├ ƒ /api/me/profile/publish
+├ ƒ /api/me/profile/reindex
+├ ƒ /api/me/profile/unpublish
+├ ƒ /api/offices/config
+├ ƒ /api/offices/search
+├ ƒ /api/profiles/[id]
+├ ƒ /api/recommendations
+├ ƒ /api/requests
+├ ƒ /api/requests/[id]/accept
+├ ƒ /api/requests/[id]/cancel
+├ ƒ /api/requests/[id]/decline
+├ ƒ /api/session
+├ ○ /connections/discover
+├ ○ /connections/mine
+├ ○ /connections/requests
+├ ○ /dashboard
+├ ○ /icon.svg
+├ ○ /login
+├ ƒ /members/[id]
+├ ○ /messages
+├ ƒ /messages/[id]
+├ ○ /privacy
+├ ○ /profile
+├ ○ /profile/edit
+├ ○ /profile/setup
+├ ○ /recover
+├ ○ /settings
+├ ○ /signup
+└ ○ /terms
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

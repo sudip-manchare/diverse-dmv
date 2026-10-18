@@ -1,0 +1,148 @@
+{
+  "checkedAt": "2026-10-17T22:27:47.913Z",
+  "environment": "Actual local Next.js, PostgreSQL, Firebase Auth emulator and live Gemini; browser Chromium; no recommendations or provider replies mocked.",
+  "reproduction": "CHROMIUM_PATH=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" node --env-file=.env --env-file=.env.local --conditions=react-server --import tsx scripts/privacy-state-check.ts",
+  "providerCapture": "Dedicated harness observes outgoing payload assertions then forwards unchanged fetch to real Gemini; fixture-only current-version indexing is requeued for evidence. Evidence records hashes/booleans rather than profile/contact/message contents.",
+  "cleanup": "Only three disposable fictional accounts and their own interactions/blocks removed; other profiles unchanged.",
+  "results": [
+    {
+      "check": "independent-scopes-1",
+      "status": "pass",
+      "scopes": {
+        "seeking": "private",
+        "pronouns": "connections",
+        "identity": "members",
+        "affiliations": "private"
+      },
+      "ownerSavedVersion": 3,
+      "ownerPreviewAndDirectApiAgree": true,
+      "provider": {
+        "taskType": "RETRIEVAL_DOCUMENT",
+        "dimension": 768,
+        "sourceHash": "de6326c77ca6c20c19b24159f533eb07f7b4b2c5967a9fea374d9dc379780bab",
+        "restrictedValuesAbsent": true,
+        "seekingIncludedOnlyIfMembers": false,
+        "activeMentoringIncluded": true,
+        "storedSourceVersion": 3,
+        "currentProfileVersion": 3,
+        "realProviderForwarded": true
+      },
+      "surfaces": [
+        {
+          "surface": "Dashboard",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": true,
+          "seekingBadge": false,
+          "restrictedCardTextAbsent": true,
+          "reason": "Current accepting mentoring offer"
+        },
+        {
+          "surface": "Discover",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": true,
+          "seekingBadge": false,
+          "restrictedCardTextAbsent": true,
+          "reason": "Current accepting mentoring offer"
+        }
+      ],
+      "pauseSavedViaActualUi": false
+    },
+    {
+      "check": "independent-scopes-2",
+      "status": "pass",
+      "scopes": {
+        "seeking": "members",
+        "pronouns": "private",
+        "identity": "connections",
+        "affiliations": "members"
+      },
+      "ownerSavedVersion": 4,
+      "ownerPreviewAndDirectApiAgree": true,
+      "provider": {
+        "taskType": "RETRIEVAL_DOCUMENT",
+        "dimension": 768,
+        "sourceHash": "5638786f0da0482dbc6f692adf5e5a327d51bedde917061602d3c4d39aba4009",
+        "restrictedValuesAbsent": true,
+        "seekingIncludedOnlyIfMembers": true,
+        "activeMentoringIncluded": true,
+        "storedSourceVersion": 4,
+        "currentProfileVersion": 4,
+        "realProviderForwarded": true
+      },
+      "surfaces": [
+        {
+          "surface": "Dashboard",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": true,
+          "seekingBadge": true,
+          "restrictedCardTextAbsent": true,
+          "reason": "Current accepting mentoring offer"
+        },
+        {
+          "surface": "Discover",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": true,
+          "seekingBadge": true,
+          "restrictedCardTextAbsent": true,
+          "reason": "Current accepting mentoring offer"
+        }
+      ],
+      "pauseSavedViaActualUi": false
+    },
+    {
+      "check": "independent-scopes-3",
+      "status": "pass",
+      "scopes": {
+        "seeking": "connections",
+        "pronouns": "members",
+        "identity": "private",
+        "affiliations": "connections"
+      },
+      "ownerSavedVersion": 5,
+      "ownerPreviewAndDirectApiAgree": true,
+      "provider": {
+        "taskType": "RETRIEVAL_DOCUMENT",
+        "dimension": 768,
+        "sourceHash": "d3368a0d32133b1d9400dc4544a4909901ec3ba0e3e733d8bd97f1123e33f2d0",
+        "restrictedValuesAbsent": true,
+        "seekingIncludedOnlyIfMembers": false,
+        "activeMentoringIncluded": false,
+        "storedSourceVersion": 5,
+        "currentProfileVersion": 5,
+        "realProviderForwarded": true
+      },
+      "surfaces": [
+        {
+          "surface": "Dashboard",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": false,
+          "seekingBadge": false,
+          "restrictedCardTextAbsent": true,
+          "reason": "Visible skills/interests fact"
+        },
+        {
+          "surface": "Discover",
+          "actualApiReady": true,
+          "boatPresent": true,
+          "activeMentoringReason": false,
+          "seekingBadge": false,
+          "restrictedCardTextAbsent": true,
+          "reason": "Visible skills/interests fact"
+        }
+      ],
+      "pauseSavedViaActualUi": true
+    },
+    {
+      "check": "live-query-exclusions-and-existing-relationship",
+      "status": "pass",
+      "realQueryForwarded": true,
+      "identityContactPrivateSeekingMessagesIntrosAbsent": true,
+      "pausedMentoringPreservedConnectionAndConversation": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "desktop",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "label": "mobile",
+    "width": 360,
+    "height": 800,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "label": "zoom-reflow",
+    "width": 720,
+    "height": 900,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "dialogClosed": true,
+    "focusReturned": true
+  }
+]

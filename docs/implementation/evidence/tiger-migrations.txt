@@ -1,0 +1,2 @@
+Applied 001-core.sql
+Applied 002-discovery.sql

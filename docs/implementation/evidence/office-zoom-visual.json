@@ -1,0 +1,29 @@
+{
+  "testedAt": "2026-10-17T23:06:58.277Z",
+  "results": [
+    {
+      "check": "K06-office-controls-normal-hover-focus-disabled",
+      "status": "pass",
+      "runtimeComputedStyles": true
+    },
+    {
+      "check": "K06-office-busy-disabled",
+      "status": "pass",
+      "actualPendingRequest": true,
+      "disabledTextExemptFromWCAGMinimum": true
+    },
+    {
+      "check": "MAP-05-actual-200pct-browser-zoom",
+      "status": "pass",
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "overflow": false,
+      "method": "Native Chromium profile zoom; no pinch scale or device scale override.",
+      "offices": 20,
+      "automatedViolations": []
+    }
+  ],
+  "attribution": "Waited for visible Google attribution DOM before capture."
+}
